@@ -1,0 +1,54 @@
+body {
+  background-color: rgb(207, 207, 23);
+}
+h1 {
+  text-align: center;
+  color: rgb(8, 8, 82);
+  text-shadow: 2px 2px #fff;
+  font-size: 50px;
+  font-family: serif;
+}
+h2 {
+  color: red;
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 2px 2px #fffefe;
+}
+.Que {
+  margin-left: 20%;
+  font-size: 22px;
+}
+pre {
+  font-size: 20px;
+  color: blue;
+  border: 3px solid green;
+  width: 70%;
+  border-radius: 10px;
+  background-color: #000000;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+.row {
+  width: 80px;
+  height: 30px;
+  background-color: rgb(212, 207, 205);
+  text-align: center;
+  padding-top: 5px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.row:hover {
+  background-color: #000000;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #fff;
+}
