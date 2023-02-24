@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Assisement</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./style.css">
+    
 
     <style>
         
         .main-row{
             display: flex;            
-            margin-left: 25%;
+            justify-content: center;
             padding: 10px;
         }
         .col{
@@ -20,6 +21,7 @@
             height: 200px;
             border-radius: 10px;                      
             margin-left: 20px;
+            margin-top: 20px;
             text-align: center;
         }
         .col:hover{
@@ -33,6 +35,12 @@
             position: relative;
             top: 50px;            
             font-weight: bold;
+        }
+        @media screen and (max-width: 480px) {
+            .main-row {
+                display: block;
+                margin-left: 10%;
+             }
         }
     </style>
 </head>

@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Assisement</title>
-    <link rel="stylesheet" href="./index.css">    
+    <link rel="stylesheet" href="./style.css">    
+    <link rel="stylesheet" href="./mobile.css">    
 </head>
 <body>
  
@@ -37,9 +38,11 @@
             {
                 if (A % 10 === 0 && B % 10 === 0) {
                 return true;
-              } else if (A % 10 !== 0 && B % 10 !== 0) {
+              } 
+              else if (A % 10 !== 0 && B % 10 !== 0) {
                 return false;
-              } else {
+              } 
+              else {
                 return true;
               }
             };
@@ -55,8 +58,7 @@
         <p>Que.5 Find the last digit of a 4 digit number</p>
         <pre>
             const Last_Digit = (n) => {
-                let num = Math.floor(n % 10);  
-                // Isolate the first digit using integer division
+                let num = Math.floor(n % 10);                 
                 return num;
              };
         </pre>

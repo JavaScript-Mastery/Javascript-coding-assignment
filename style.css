@@ -26,7 +26,8 @@ pre {
   border-radius: 10px;
   background-color: #000000;
   padding-top: 20px;
-  padding-right: 20px;
+  overflow-x: auto;
+  line-height: 30px;
 }
 .container {
   display: flex;
@@ -51,4 +52,39 @@ a {
 }
 a:hover {
   color: #fff;
+  text-shadow: 1px 1px #000000;
+}
+@media screen and (max-width: 1044px) {
+  pre {
+    width: 90%;
+  }
+  .Que {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 664px) {
+  pre {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 594px) {
+  pre {
+    font-size: 18px;
+    padding: 0;
+    line-height: 40px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 442px) {
+  pre {
+    font-size: 18px;
+    padding: 0;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-row {
+    display: block;
+  }
 }
