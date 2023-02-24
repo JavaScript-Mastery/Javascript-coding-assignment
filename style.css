@@ -59,7 +59,7 @@ a:hover {
     width: 90%;
   }
   .Que {
-    margin: 0;
+    margin-left: 2%;
   }
 }
 @media screen and (max-width: 664px) {
