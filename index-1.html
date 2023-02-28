@@ -24,12 +24,7 @@
         <p>Que.2 Find if the conditions are obeyed or not?</p>
         <pre>
             const Is_Valid = (a,b) => {
-                if(a<10 && a>b){
-                  return true;
-                }
-                else{
-                  return false;
-                }
+                return (a<10 && a>b);                  
             };
         </pre>
         
@@ -37,15 +32,9 @@
         <pre>
             const Check = (A, B) => 
             {
-                if (A % 10 === 0 && B % 10 === 0) {
-                return true;
-              } 
-              else if (A % 10 !== 0 && B % 10 !== 0) {
-                return false;
-              } 
-              else {
-                return true;
-              }
+                return !(A % 10 !== 0 && B % 10 !== 0);
+                // or
+                // return (A % 10 !== 0 || B % 10 !== 0);
             };
         </pre>
         <p>Que.4 Find the first digit of a 4 digit number</p>

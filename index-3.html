@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="Iteration Statements">
+    <meta name="keywords" content="Print the Table, Print Numbers, Check whether a Number is a prime or not, Print the Pattern, Print the Odds, Find the sum of the digits of a given number, Iteration Statements, Find the number of digits, Find the Fives, Find Sum">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Assisement</title>
     <link rel="stylesheet" href="./style.css">    
@@ -13,89 +13,156 @@
     <h2>3. Iteration Statements</h2>
          
          <!-- ====== write code -->
-    <!--
+    
     <div class="Que">   
-        <p>Que.1 Add two Numbers</p>
+        <p>Que.1 Find the number of digits</p>
         
         <pre>
-            const AddTwoNumbers = (a,b) => {
-                return a+b;
-            };
-        </pre>
-        
-        <p>Que.2 Find if the conditions are obeyed or not?</p>
-        <pre>
-            const Is_Valid = (a,b) => {
-                if(a<10 && a>b){
-                  return true;
-                }
-                else{
-                  return false;
-                }
-            };
-        </pre>
-        
-        <p>Que.3 Check the conditons</p>
-        <pre>
-            const Check = (A, B) => 
+                        
+            const Find_Digits = (N) => 
             {
-                if (A % 10 === 0 && B % 10 === 0) {
-                return true;
-              } else if (A % 10 !== 0 && B % 10 !== 0) {
-                return false;
-              } else {
-                return true;
+            	 // Convert the number to a string
+                const numStr = N.toString();
+            
+                // Initialize the count to 0
+                let count = 0;
+            
+                // Iterate through each character in the string
+                for (const ch of numStr) {
+                    // If the character is a digit, increment the count
+                    if (/[0-9]/.test(ch)) {
+                        count++;
+                    }
+                }
+            
+                // Return the count
+                return count;
+            };
+            
+
+        </pre>
+        
+        <p>Que.2 Find the Fives.</p>
+        <pre>            
+            const Find_Five = (N) => 
+            {
+            	 // Convert the number to a string
+                const numStr = N.toString();
+            
+                // Initialize the count to 0
+                let count = 0;
+            
+                // Iterate through each character in the string
+                for (const ch of numStr) {
+                    // If the character is a digit, increment the count
+                    if (ch == '5') {
+                        count++;
+                    }
+                }
+            
+                // Return the count
+                return count;
+            };
+            
+        </pre>
+        
+        <p>Que.3 Find Sum</p>
+        <pre>
+            const findSum = (n) => {
+               let sum = 0;
+                for(let i=1; i<=n; i++){
+                  if(i%2===0){
+                    sum = sum+i;
+                  }
+                }
+                return sum;
+            };
+
+        </pre>
+        <p>Que.4 Find the sum of the digits of a given number.</p>
+        <pre>
+            const Number_Sum = (N) => 
+            {
+            	// Convert the number to a string
+                const numStr = N.toString();
+            
+                
+                let sum = 0;
+                
+                for (const ch of numStr) {
+                   sum += Number(ch);
+                }
+            
+                return sum;
+            };
+
+
+        </pre>
+
+        <p>Que.5 Print the Odds.</p>
+        <pre>
+            const Print_Odd = (N) => 
+            {
+            	console.log("2"); // print 2 first
+            
+              for (let i = 3; i <= N; i += 2) { // start from 3 and increment by 2 to get only odd numbers
+                console.log(i);
               }
             };
         </pre>
-        <p>Que.4 Find the first digit of a 4 digit number</p>
-        <pre>
-            const First_Digit = (n) => {
-                let num = Math.floor(n / 1000);
-                return num;
-            };
-        </pre>
-
-        <p>Que.5 Find the last digit of a 4 digit number</p>
-        <pre>
-            const Last_Digit = (n) => {
-                let num = Math.floor(n % 10);  
-                // Isolate the first digit using integer division
-                return num;
-             };
-        </pre>
-        <p>Que.6 Find the remainder</p>
-        <pre>
-            const Find_the_remainder = (a,b) => {
-                let num = b%a;
-                return num;
-            };
-        </pre>
-        <p>Que.7 Multipy two Numbers</p>
-        <pre>
-            const Multiply_two_number = (a,b) => {
-                return a*b;
-            };
-        </pre>
-        <p>Que.8 Marks Calculator</p>
+        <p>Que.6 Print the Pattern.</p>
         <pre>            
-            const Sum = (A, B, C) => 
+            const Print_pattern = (N) => 
             {
-              return A+B+C;
+              for(let i=0; i < N; i++){
+                let row = "";
+                for(let j=0; j<=i; j++){
+                  row += "*";
+                }
+                console.log(row);
+              }
             };
-            
-            const Average = (A, B, C) => 
+        </pre>
+        <p>Que.7 Check whether a Number is a prime or not.</p>
+        <pre>
+            const Prime_Check = (N) => 
             {
-               return (A+B+C)/3;
+            	 if (N < 2) {
+                return "NO";
+              }
+              for (let i = 2; i <= Math.sqrt(N); i++) {
+                if (N % i === 0) {
+                  return "NO";
+                }
+              }
+              return "YES";
+            	
+            };
+
+        </pre>
+        <p>Que.8 Print Numbers</p>
+        <pre>            
+            const printNumbers = (n) => {
+                for(let i=1; i<=n; i++){
+                  console.log(i);
+                }
+            };
+
+        </pre>
+        <p>Que.9 Print the Table</p>
+        <pre>            
+                        
+            const Print_Table = (N) => 
+            {
+            	for (let i = 1; i <= 10; i++) {
+                console.log(N + " * " + i + " = " + N*i);
+              }
             };
         </pre>
     </div> 
     
-    --> 
-      <h1 style="margin-top: 200px;">coming soon...</h1>
-
+   
     
-
     <div class="container">
         <div class="row"><a href="./index-2.html">Back</a></div>
         <div class="row"><a href="./index-4.html">Next</a></div>
