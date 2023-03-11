@@ -330,3 +330,25 @@
 //   i++;
 // } while (i < 5);
 // Output: 0 1 2 3 4
+//========================================================
+//Today: 02-03-2023
+
+// let multi_OP = function (x, y) {
+//   let addition = add(x, y); // 15
+//   let multiplication = multi(x, y); // 50
+//   let divison = div(x, y); // 2
+//   return addition + multiplication + divison; // 15+50+2 = 67
+// };
+// let add = function (x, y) {
+//   return x + y; // 5+10 = 15
+// };
+// let multi = function (x, y) {
+//   return x * y; // 5*10 = 50
+// };
+// let div = function (x, y) {
+//   return y / x; // 10/5 = 2
+// };
+// let x = 5,
+//   y = 10;
+// let result = multi_OP(x, y);
+// console.log(result); // Output: 67
