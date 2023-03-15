@@ -12,88 +12,195 @@
  
     <h2>5. Strings</h2>
          <!-- ====== write code -->
-    <!--
+    
     <div class="Que">   
-        <p>Que.1 Add two Numbers</p>
+        <p>Que.1 Count Characters</p>
         
-        <pre>
-            const AddTwoNumbers = (a,b) => {
-                return a+b;
-            };
+        <pre>            
+            const countCharacters = (S) => 
+            {
+              let aCount = 0;
+              let dCount = 0;
+            
+              for (let i = 0; i < S.length; i++) {
+                if (S[i] === "A") {
+                  aCount++;
+                } else if (S[i] === "D") {
+                  dCount++;
+                }
+              }
+            
+              return [aCount, dCount];
+            }; 
         </pre>
         
-        <p>Que.2 Find if the conditions are obeyed or not?</p>
+        <p>Que.2 Count the Heads</p>
+        <pre>            
+            var Count_Occ = (s) => 
+            {
+              let count = {};
+                for (let i = 0; i < s.length; i++) {
+                    let char = s.charAt(i);
+                    if (count[char]) {
+                        count[char]++;
+                    } else {
+                        count[char] = 1;
+                    }
+                }
+                let result = "";
+                let keys = Object.keys(count).sort();
+                for (let i = 0; i < keys.length; i++) {
+                    if (count[keys[i]] > 1) {
+                        result += keys[i] + count[keys[i]];
+                    }
+                }
+            
+                return result;
+            }; 
+
+        </pre>
+        
+        <p>Que.3 Count the Vowels</p>
+        <pre>            
+            var Count_Vowels= (S) => 
+            {
+                let count = 0;
+                for(let i=0; i < S.length; i++){
+                  if(S[i]==='a' || S[i]==='e' || S[i]==='i' || S[i]==='o' || S[i]==='u'){
+                    count++;
+                  }
+                }
+                return count;
+            };
+        </pre>
+        <p>Que.4 Concatenate the Strings</p>
+        <pre>            
+            var Concatenate_Strings = (S1, S2) => 
+            {
+                return S1.concat('', S2);
+            };
+        </pre>
+
+        <p>Que.5 Find Length</p>
+        <pre>            
+            const findLength = (S) => 
+            {
+                return S.length;
+            };
+        </pre>
+        <p>Que.6 Find the Winner</p>
+        <pre>             
+            var Game_Winner = (S) => 
+            {
+              let adityaWins = 0;
+                let danishWins = 0;
+                
+                for(let i = 0; i < S.length; i++) {
+                    if(S[i] === 'A') {
+                        adityaWins++;
+                    } else {
+                        danishWins++;
+                    }
+                }
+                
+                if(adityaWins > danishWins) {
+                    return 'Aditya';
+                } else if(danishWins > adityaWins) {
+                    return 'Danish';
+                } else {
+                    return 'Draw';
+                }
+            } 
+        </pre>
+        <p>Que.7 Join Strings</p>
+        <pre>            
+            const joinStrings = (S, P) => 
+            {
+                return S+P;
+            };
+        </pre>
+        <p>Que.8 Plaindrome Check</p>
         <pre>
-            const Is_Valid = (a,b) => {
-                if(a<10 && a>b){
-                  return true;
+            var Palin_Check = (str) =>
+            {
+            	// Remove all non-alphanumeric characters from the string
+              str = str.replace(/[^0-9a-zA-Z]/g, '');
+            
+              // Check if the string is equal to its reverse
+              if (str === str.split('').reverse().join('')) {
+                return "True";
+              } else {
+                return "False";
+              }
+            }
+        </pre>
+        <p>Que.9 Reverse the String</p>
+        <pre>
+            var Reverse_String = (str) => 
+            {
+                let str2 = "";
+                for(let i = str.length-1; i>=0; i--){
+                  str2 +=str[i];
+                }
+                return str2;
+            }; 
+        </pre>
+        <p>Que.10 Match the Strings</p>
+        <pre>
+            var String_Match = (S1,S2) => 
+            {
+                if(S1===S2){
+                  return "YES";
                 }
                 else{
-                  return false;
+                  return "NO";
                 }
             };
         </pre>
-        
-        <p>Que.3 Check the conditons</p>
-        <pre>
-            const Check = (A, B) => 
+        <p>Que.11 String Replace</p>
+        <pre> 
+            var Replace = (S, pattern , text) => 
             {
-                if (A % 10 === 0 && B % 10 === 0) {
-                return true;
-              } else if (A % 10 !== 0 && B % 10 !== 0) {
-                return false;
-              } else {
-                return true;
-              }
+                return S.replace(pattern, text);
             };
         </pre>
-        <p>Que.4 Find the first digit of a 4 digit number</p>
-        <pre>
-            const First_Digit = (n) => {
-                let num = Math.floor(n / 1000);
-                return num;
-            };
-        </pre>
-
-        <p>Que.5 Find the last digit of a 4 digit number</p>
-        <pre>
-            const Last_Digit = (n) => {
-                let num = Math.floor(n % 10);  
-                // Isolate the first digit using integer division
-                return num;
-             };
-        </pre>
-        <p>Que.6 Find the remainder</p>
-        <pre>
-            const Find_the_remainder = (a,b) => {
-                let num = b%a;
-                return num;
-            };
-        </pre>
-        <p>Que.7 Multipy two Numbers</p>
-        <pre>
-            const Multiply_two_number = (a,b) => {
-                return a*b;
-            };
-        </pre>
-        <p>Que.8 Marks Calculator</p>
+        <p>Que.12 Split the String</p>
         <pre>            
-            const Sum = (A, B, C) => 
+            var Split_the_string = (S) => 
             {
-              return A+B+C;
+              // Split the string by spaces using the split() method
+              // Return the array of strings
+              return S.split(" ");     
             };
-            
-            const Average = (A, B, C) => 
-            {
-               return (A+B+C)/3;
-            };
+ 
         </pre>
-    </div> 
+        <p>Que.13 Count the Vowels and Consonants</p>
+        <pre>  
+            var Count_Vowels= (S) => 
+            {
+                Count_V=0;
+                for(let i=0; i < S.length; i++){
+                  if(S[i]==='a'||S[i]==='e'||S[i]==='i'||S[i]==='o'|| S[i]==='u'){
+                   Count_V++;
+                  }
+                }
+                return  Count_V;
+            };
+            var Count_Consonants= (S) => 
+            {
+                Count_C=0;
+                for(let i=0; i < S.length; i++){
+                  if(S[i]!=='a' && S[i]!=='e' && S[i]!=='i' && S[i]!=='o' && S[i]!=='u'){
+                    Count_C++;
+                  }
+                }
+                
+                return  Count_C;
+            };
+  
+        </pre>
+    </div>     
     
-    --> 
-      <h1 style="margin-top: 200px;">coming soon...</h1>
-
-
     <div class="container">
         <div class="row"><a href="./index-4.html">Back</a></div>
         <div class="row"><a href="./index-6.html">Next</a></div>
