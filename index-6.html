@@ -12,88 +12,115 @@
  
     <h2>6. Problem Solving</h2>
          <!-- ====== write code -->
-    <!--
+    
     <div class="Que">   
-        <p>Que.1 Add two Numbers</p>
+        <p>Que.1 Find the Smaller Angle</p>
         
         <pre>
-            const AddTwoNumbers = (a,b) => {
-                return a+b;
-            };
-        </pre>
-        
-        <p>Que.2 Find if the conditions are obeyed or not?</p>
-        <pre>
-            const Is_Valid = (a,b) => {
-                if(a<10 && a>b){
-                  return true;
-                }
-                else{
-                  return false;
-                }
-            };
-        </pre>
-        
-        <p>Que.3 Check the conditons</p>
-        <pre>
-            const Check = (A, B) => 
+            
+            var Minimal_Angle = (h, m) => 
             {
-                if (A % 10 === 0 && B % 10 === 0) {
-                return true;
-              } else if (A % 10 !== 0 && B % 10 !== 0) {
-                return false;
+               // Calculate angle made by hour hand with respect to 12 o'clock
+              let hourAngle = (h % 12) * 30 + m / 2;
+              
+              // Calculate angle made by minute hand with respect to 12 o'clock
+              let minuteAngle = m * 6;
+              
+              // Calculate absolute difference between two angles
+              let angleDiff = Math.abs(hourAngle - minuteAngle);
+              
+              // Take smaller angle between two possible angles
+              let angle = Math.min(angleDiff, 360 - angleDiff);
+              
+              // Return minimal angle
+              return angle;   
+            };
+ 
+        </pre>
+        
+        <p>Que.2 Check whether the year is Leap year or not.</p>
+        <pre>
+             
+            var Check_Leap = (year) => 
+            {
+             // Check if the year is divisible by 4
+              if (year % 4 === 0) {
+                // If the year is divisible by 100 and not divisible by 400, it is not a leap year
+                if (year % 100 === 0 && year % 400 !== 0) {
+                  return "Non Leap Year";
+                } else {
+                  // Otherwise, it is a leap year
+                  return "Leap Year";
+                }
               } else {
-                return true;
+                // If the year is not divisible by 4, it is not a leap year
+                return "Non Leap Year";
               }
             };
         </pre>
-        <p>Que.4 Find the first digit of a 4 digit number</p>
+        
+        <p>Que.3 Perfect Number Check.</p>
         <pre>
-            const First_Digit = (n) => {
-                let num = Math.floor(n / 1000);
-                return num;
+             
+            var Perfect_Check = (N) => 
+            {
+              // Find the divisors of the number and add them
+              let sum = 0;
+              let M = 1;
+               // loop through all divisors of the number
+              while(N>=M) {
+               if (N % M === 0) {
+                 sum += M;
+                }
+                M++;
+              }
+              // Check if the sum of divisors is equal to the input number
+              if (sum === N) {
+                return "YES";
+              } else {
+                return "NO";
+              }
+                    
+            };
+ 
+        </pre>
+        <p>Que.4 Reverse a Number.</p>
+        <pre>
+             
+            var Reverse_Number = (N) => 
+            {
+              // Initialize a variable to store the reversed number
+              let reversedNumber = 0;
+            
+              // Loop through the digits of the number and reverse them
+              while (N > 0) {
+                let remainder = N % 10;
+                reversedNumber = reversedNumber * 10 + remainder;
+                N = Math.floor(N / 10);
+              }
+            
+              // Return the reversed number
+              return reversedNumber;
+            
             };
         </pre>
 
-        <p>Que.5 Find the last digit of a 4 digit number</p>
+        <p>Que.5 Substring Check.</p>
         <pre>
-            const Last_Digit = (n) => {
-                let num = Math.floor(n % 10);  
-                // Isolate the first digit using integer division
-                return num;
-             };
-        </pre>
-        <p>Que.6 Find the remainder</p>
-        <pre>
-            const Find_the_remainder = (a,b) => {
-                let num = b%a;
-                return num;
-            };
-        </pre>
-        <p>Que.7 Multipy two Numbers</p>
-        <pre>
-            const Multiply_two_number = (a,b) => {
-                return a*b;
-            };
-        </pre>
-        <p>Que.8 Marks Calculator</p>
-        <pre>            
-            const Sum = (A, B, C) => 
+            var Substring_Check = (S1, S2) => 
             {
-              return A+B+C;
+              if (S1.includes(S2)) {
+                return "YES";
+              } else {
+                return "NO";
+              }   
             };
-            
-            const Average = (A, B, C) => 
-            {
-               return (A+B+C)/3;
-            };
+ 
         </pre>
+        
     </div> 
     
-    --> 
-      <h1 style="margin-top: 200px;">coming soon...</h1>
- 
-
+    
     <div class="container">
         <div class="row"><a href="./index-5.html">Back</a></div>
         <div class="row"><a href="./index-7.html">Next</a></div>
