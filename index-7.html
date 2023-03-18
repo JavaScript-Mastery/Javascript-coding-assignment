@@ -12,87 +12,92 @@
  
     <h2>7. Objects</h2>
          <!-- ====== write code -->
-    <!--
+   
     <div class="Que">   
-        <p>Que.1 Add two Numbers</p>
+        <p>Que.1 Create a Function</p>
         
         <pre>
-            const AddTwoNumbers = (a,b) => {
-                return a+b;
-            };
+            function Check(obj1){
+              obj1.setter = function() {
+                console.log(obj1.name);
+              }
+            }
         </pre>
         
-        <p>Que.2 Find if the conditions are obeyed or not?</p>
+        <p>Que.2 Delete a Parameter</p>
         <pre>
-            const Is_Valid = (a,b) => {
-                if(a<10 && a>b){
-                  return true;
-                }
-                else{
-                  return false;
-                }
-            };
-        </pre>
-        
-        <p>Que.3 Check the conditons</p>
-        <pre>
-            const Check = (A, B) => 
-            {
-                if (A % 10 === 0 && B % 10 === 0) {
+            function Check(obj1, rollno) {
+              // Check if the object has the `rollno` property
+              if (obj1.hasOwnProperty("rollno") && obj1.rollno === rollno) {
+                // Delete the `rollno` property
+                delete obj1.rollno;
                 return true;
-              } else if (A % 10 !== 0 && B % 10 !== 0) {
+              } else {
+                return false;
+              }   
+            }
+        </pre>
+        
+        <p>Que.3 Check whether the Package is Dream Package or not</p>
+        <pre>
+            function Check(obj1) {
+              if (obj1.salary > 500000) {
+                return "Dream";
+              } else {
+                return "NotDream";
+              }
+            }
+        </pre>
+        <p>Que.4 Check whether the Object has a parameter or not</p>
+        <pre>            
+            function Check(obj1) {
+               if (Object.keys(obj1).length === 0) {
                 return false;
               } else {
                 return true;
               }
-            };
-        </pre>
-        <p>Que.4 Find the first digit of a 4 digit number</p>
-        <pre>
-            const First_Digit = (n) => {
-                let num = Math.floor(n / 1000);
-                return num;
-            };
+            }
         </pre>
 
-        <p>Que.5 Find the last digit of a 4 digit number</p>
-        <pre>
-            const Last_Digit = (n) => {
-                let num = Math.floor(n % 10);  
-                // Isolate the first digit using integer division
-                return num;
-             };
-        </pre>
-        <p>Que.6 Find the remainder</p>
-        <pre>
-            const Find_the_remainder = (a,b) => {
-                let num = b%a;
-                return num;
-            };
-        </pre>
-        <p>Que.7 Multipy two Numbers</p>
-        <pre>
-            const Multiply_two_number = (a,b) => {
-                return a*b;
-            };
-        </pre>
-        <p>Que.8 Marks Calculator</p>
+        <p>Que.5 Merge the Objects</p>
         <pre>            
-            const Sum = (A, B, C) => 
-            {
-              return A+B+C;
-            };
-            
-            const Average = (A, B, C) => 
-            {
-               return (A+B+C)/3;
-            };
+            function Check(obj1,obj2) {
+                return {
+                name: obj1.name,
+                id: obj1.id,
+                state: obj2.state,
+                code: obj2.code
+              };
+            }
+        </pre>
+        <p>Que.6 Object Multiplyer</p>
+        <pre>
+            function Check(a,{id, houseno}) {    
+                return { id: id * a, houseno: houseno * a };
+            }
+
+
+        </pre>
+        <p>Que.7 Find the  sum of Object Members</p>
+        <pre>
+            function Check({ p1, p2, p3 }) {
+    
+                return p1 + p2 + p3;
+            }
+        </pre>
+        <p>Que.8 Check whether the Objects are same or not.</p>
+        <pre>            
+            function check(obj1,a,b) {
+                if (obj1.name === a && obj1.id === b) {
+                return true;
+              } else {
+                return false;
+              }
+            }
         </pre>
     </div> 
     
-    --> 
-      <h1 style="margin-top: 200px;">coming soon...</h1>
- 
+   
 
     <div class="container">
         <div class="row"><a href="./index-6.html">Back</a></div>
