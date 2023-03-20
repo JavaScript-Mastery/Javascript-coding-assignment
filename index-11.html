@@ -1,106 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Assignment">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Assignment" />
     <title>Coding Assisement</title>
-    <link rel="stylesheet" href="./style.css">    
-</head>
-<body>
- 
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      img{
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
     <h2>11. DOM</h2>
 
-    
+    <!-- ====== write code -->
 
-         <!-- ====== write code -->
-    <!--
-    <div class="Que">   
-        <p>Que.1 Add two Numbers</p>
-        
-        <pre>
-            const AddTwoNumbers = (a,b) => {
-                return a+b;
-            };
-        </pre>
-        
-        <p>Que.2 Find if the conditions are obeyed or not?</p>
-        <pre>
-            const Is_Valid = (a,b) => {
-                if(a<10 && a>b){
-                  return true;
-                }
-                else{
-                  return false;
-                }
-            };
-        </pre>
-        
-        <p>Que.3 Check the conditons</p>
-        <pre>
-            const Check = (A, B) => 
-            {
-                if (A % 10 === 0 && B % 10 === 0) {
-                return true;
-              } else if (A % 10 !== 0 && B % 10 !== 0) {
-                return false;
-              } else {
-                return true;
-              }
-            };
-        </pre>
-        <p>Que.4 Find the first digit of a 4 digit number</p>
-        <pre>
-            const First_Digit = (n) => {
-                let num = Math.floor(n / 1000);
-                return num;
-            };
-        </pre>
+    <div class="Que">
+      <p>Que.1 Write the code to access element which is having id as "text"</p>
 
-        <p>Que.5 Find the last digit of a 4 digit number</p>
-        <pre>
-            const Last_Digit = (n) => {
-                let num = Math.floor(n % 10);  
-                // Isolate the first digit using integer division
-                return num;
-             };
-        </pre>
-        <p>Que.6 Find the remainder</p>
-        <pre>
-            const Find_the_remainder = (a,b) => {
-                let num = b%a;
-                return num;
-            };
-        </pre>
-        <p>Que.7 Multipy two Numbers</p>
-        <pre>
-            const Multiply_two_number = (a,b) => {
-                return a*b;
-            };
-        </pre>
-        <p>Que.8 Marks Calculator</p>
-        <pre>            
-            const Sum = (A, B, C) => 
-            {
-              return A+B+C;
-            };
+      <pre>
+            const element = document.getElementById("text");
+        </pre
+      >
+
+      <p>Que.2 Write the code to access element which is having tag as "h1"</p>
+      <pre>
+            const element = document.querySelector("h1");
+        </pre
+      >
+
+      <p>
+        Que.3 Write the code to access element which is having class as "box"
+      </p>
+      <pre>
+            const element = document.querySelector(".box");
+        </pre
+      >
+      <p>
+        Que.4 &lt;h1&gt;Hello &lt;/h1&gt; <br />
+        Change the heading from "Hello" to "Hello World" using DOM functions
+      </p>
+      <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+            &lt;head&gt;
+            	&lt;title&gt;Change heading text using DOM functions&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            	&lt;h1 id="myHeading"&gt;Hello&lt;/h1&gt;
+            	&lt;script&gt;
+            		const heading = document.getElementById("myHeading");
+            		heading.textContent = "Hello World";
+            	&lt;/script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+
+        </pre
+      >
+
+      <p>
+        Que.5 Create three cards on HTML page and arrange them using flex
+        property in row or horizontal direction and also create button at the
+        bottom named "Change Flex direction". When user clicks on this button,
+        the cards arrangement should be changed to vertical direction.
+      </p>
+      <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+            &lt;head&gt;
+            	&lt;title&gt;Flexbox cards&lt;/title&gt;
+            	&lt;style&gt;
+            		.container {
+            			display: flex;
+            			flex-wrap: wrap;
+            			justify-content: space-around;
+            		}
             
-            const Average = (A, B, C) => 
-            {
-               return (A+B+C)/3;
-            };
-        </pre>
-    </div> 
-    
-    --> 
-      <h1 style="margin-top: 200px;">coming soon...</h1>
+            		.card {
+            			background-color: #ff0808;
+            			padding: 10px;
+            			margin: 10px;
+            			width: 200px;
+            			height: 200px;
+            		}
+            	&lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            	&lt;div class="container"&gt;
+            		&lt;div class="card"&gt;Card 1&lt;/div&gt;
+            		&lt;div class="card"&gt;Card 2&lt;/div&gt;
+            		&lt;div class="card"&gt;Card 3&lt;/div&gt;
+            	&lt;/div&gt;
+            	&lt;button id="changeFlexDirection"&gt;Change Flex Direction&lt;/button&gt;
+            
+            	&lt;script&gt;
+            		const button = document.getElementById("changeFlexDirection");
+            		const container = document.querySelector(".container");
+            
+            		button.addEventListener("click", function() {
+            			container.style.flexDirection = "column";
+            		});
+            	&lt;/script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
 
-    <div class="container">
-        <div class="row"><a href="./index-10.html">Back</a></div>
-        <div class="row"><a href="./index-12.html">Next</a></div>
+        </pre
+      >
+      <p>Que.6 What’s the difference between window vs document?</p>
+      <img src="./images/table.jpg" alt="window vs document">
+
+      <p>
+        Que.7 &lt;h1&gt;Hello &lt;/h1&gt; <br />
+        Add one style attribute and give text color as red and id attribute and
+        give the id value as "heading" in the above given h1 tag using DOM
+        functions
+      </p>
+      <pre>            
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+        	&lt;title&gt;Change heading style using DOM functions&lt;/title&gt;
+       &lt;/head&gt;
+        &lt;body&gt;
+        	&lt;h1 id="heading"&gt;Hello&lt;/h1&gt;
+        	&lt;script&gt;
+        		const heading = document.getElementById("heading");
+        		heading.setAttribute("style", "color: red;");		
+        	&lt;/script&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+
+        </pre
+      >
+      <p>Que.8 Create an HTML page having content as Hello world and a button named Replace Text. 
+        When user will click on this button page content should be changed to "Welcome to Elevation academy"</p>
+      <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+        	&lt;title&gt;click on button&lt;/title&gt;
+       &lt;/head&gt;
+        &lt;body&gt;          
+            &lt;p id="text"&gt;Hello world&lt;/p&gt;
+            &lt;button onclick="replaceText()"&gt;Replace Text&lt;/button&gt;
+          
+            &lt;script&gt;
+              function replaceText() {
+                const text = document.getElementById("text");
+                text.innerText = "Welcome to Elevation academy";
+              }
+            &lt;/script&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </pre
+      >
+      <p>Que.9 Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second</p>
+      <pre>            
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+          &lt;head&gt;
+            &lt;title&gt;timer clock using JS&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1 id="timer"&gt;00:00:00&lt;/h1&gt;
+        
+            &lt;script&gt;
+              setInterval(function () {
+                const timer = document.getElementById("timer");
+                const now = new Date();
+                const hours = now.getHours().toString().padStart(2, "0");
+                const minutes = now.getMinutes().toString().padStart(2, "0");
+                const seconds = now.getSeconds().toString().padStart(2, "0");
+                const currentTime = hours + ":" + minutes + ":" + seconds;
+                timer.innerText = currentTime;
+              }, 1000);
+            &lt;/script&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+    
+      </pre
+      >
+      <p>Que.10 Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected</p>
+      <pre>
+          &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+            &lt;head&gt;
+              &lt;title&gt;drop down for selecting Year &lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;select id="yearSelect" onchange="printSelected()"&gt;
+              &lt;option&gt; value="20-21">20-21&lt;/option&gt;
+              &lt;option&gt; value="21-22">21-22&lt;/option&gt;
+              &lt;option&gt; value="22-23">22-23&lt;/option&gt;
+            &lt;/select&gt;
+          
+            &lt;script&gt;
+              function printSelected() {
+                const select = document.getElementById("yearSelect");
+                const selectedOption = select.options[select.selectedIndex];
+                console.log(selectedOption.text);
+              }
+            &lt;/script&gt;
+          &lt;/body&gt;
+          
+          &lt;/html&gt;   
+      </pre
+      >
     </div>
 
-      
-</body>
+    <div class="container">
+      <div class="row"><a href="./index-10.html">Back</a></div>
+      <div class="row"><a href="./index-12.html">Next</a></div>
+    </div>
+  </body>
 </html>

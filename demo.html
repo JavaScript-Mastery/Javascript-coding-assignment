@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script src="./demo.js"></script>
+<html>
+  <head>
+    <title>drop down for selecting Year </title>
+  </head>
+  <body>
+  <select id="yearSelect" onchange="printSelected()">
+    <option value="20-21">20-21</option>
+    <option value="21-22">21-22</option>
+    <option value="22-23">22-23</option>
+  </select>
+
+  <script>
+    function printSelected() {
+      const select = document.getElementById("yearSelect");
+      const selectedOption = select.options[select.selectedIndex];
+      console.log(selectedOption.text);
+    }
+  </script>
 </body>
+
 </html>

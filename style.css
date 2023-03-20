@@ -24,7 +24,7 @@ pre {
   border: 3px solid green;
   width: 70%;
   border-radius: 10px;
-  background-color: #c2bbbb;
+  background-color: #cfc9c9;
   padding-top: 20px;
   overflow-x: auto;
   line-height: 30px;
@@ -54,6 +54,7 @@ a:hover {
   color: #fff;
   text-shadow: 1px 1px #000000;
 }
+
 @media screen and (max-width: 1044px) {
   pre {
     width: 90%;
