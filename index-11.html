@@ -22,22 +22,72 @@
       <p>Que.1 Write the code to access element which is having id as "text"</p>
 
       <pre>
-            const element = document.getElementById("text");
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;title&gt;access element&lt;/title&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+              &lt;h1 id="text"&gt;This is text id&lt;/h1&gt;
+            
+              &lt;script&gt;
+                const element = document.getElementById("text");
+                console.log(element); // &lt;h1 id="text"&gt;This is text id&lt;/h1&gt;
+              &lt;/script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+
         </pre
       >
 
       <p>Que.2 Write the code to access element which is having tag as "h1"</p>
       <pre>
-            const element = document.querySelector("h1");
-        </pre
+          &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+            &lt;head&gt;
+              &lt;title&gt;access element&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;h1&gt;This is text in h1 tag&lt;/h1&gt;
+            &lt;script&gt;
+              const element = document.getElementsByTagName("h1");
+              
+              console.log(element); // HTMLCollection [h1]
+             
+              let content = element[0].innerText;
+              console.log(content); // This is text in h1 tag
+          
+            &lt;/script&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+
+      </pre
       >
 
       <p>
         Que.3 Write the code to access element which is having class as "box"
       </p>
       <pre>
-            const element = document.querySelector(".box");
-        </pre
+          &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+            &lt;head&gt;
+              &lt;title&gt;access element&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;div class="box">box-1&lt;/div&gt;
+            &lt;script&gt;
+              const element = document.getElementsByClassName("box");
+              
+              console.log(element); // HTMLCollection(1)
+             
+              let content = element[0].innerText;
+              console.log(content); // box-1
+          
+            &lt;/script&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+
+      </pre
       >
       <p>
         Que.4 &lt;h1&gt;Hello &lt;/h1&gt; <br />

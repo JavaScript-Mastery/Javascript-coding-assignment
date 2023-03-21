@@ -15,87 +15,105 @@
     
 
          <!-- ====== write code -->
-    <!--
-    <div class="Que">   
-        <p>Que.1 Add two Numbers</p>
+    
+    <div class="Que">  
+        <p>You have given:</p>
+        
+        <pre style="color: rgb(19, 1, 85);">
+           let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+              {name: 'Baba', id: 101, marks : 23 },
+              {name: 'yaga', id: 200, marks : 45 },
+              {name: 'Wick', id: 115, marks : 75 } 
+            ];
+        </pre> 
+        <p>Que.1 We are interested in retrieving only the students' names; all the names should be in caps. <br>
+         <br> ['JOHN', 'BABA', 'YAGA', 'WICK']</p>
         
         <pre>
-            const AddTwoNumbers = (a,b) => {
-                return a+b;
-            };
+            let studentNames = studentRecords.map(student => student.name.toUpperCase());
+            console.log(studentNames); // ['JOHN', 'BABA', 'YAGA', 'WICK']
+
         </pre>
         
-        <p>Que.2 Find if the conditions are obeyed or not?</p>
-        <pre>
-            const Is_Valid = (a,b) => {
-                if(a<10 && a>b){
-                  return true;
-                }
-                else{
-                  return false;
-                }
-            };
+        <p>Que.2 Suppose we have the same dataset as above but this time we 
+            want to get the details of students who scored more than 50 marks. <br>
+         <br>   [{name: 'John', id: 123, marks: 98 },
+                 {name: 'Wick', id: 115, marks: 75 }]</p>
+        <pre>            
+            let highScorers = studentRecords.filter((student) => student.marks > 50);
+            console.log(highScorers); // [{name: 'John', id: 123, marks: 98 },{name: 'Wick', id: 115, marks: 75 }]
+
         </pre>
         
-        <p>Que.3 Check the conditons</p>
+        <p>Que.3 Retrieve the details of students who scored more than 50 marks and have IDs greater than 120.</p>
         <pre>
-            const Check = (A, B) => 
-            {
-                if (A % 10 === 0 && B % 10 === 0) {
-                return true;
-              } else if (A % 10 !== 0 && B % 10 !== 0) {
-                return false;
-              } else {
-                return true;
-              }
-            };
+           let filteredStudents = studentRecords.filter(
+             (student) => student.marks > 50 && student.id > 120
+           );
+           console.log(filteredStudents); // [{name: 'John', id: 123, marks: 98 }]
+ 
         </pre>
-        <p>Que.4 Find the first digit of a 4 digit number</p>
+        <p>Que.4 Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students.</p>
         <pre>
-            const First_Digit = (n) => {
-                let num = Math.floor(n / 1000);
-                return num;
-            };
+            let totalMarks = studentRecords.reduce(
+              (total, student) => total + student.marks, 0 );
+            console.log(totalMarks); // 241
+
         </pre>
 
-        <p>Que.5 Find the last digit of a 4 digit number</p>
+        <p>Que.5 This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above.</p>
         <pre>
-            const Last_Digit = (n) => {
-                let num = Math.floor(n % 10);  
-                // Isolate the first digit using integer division
-                return num;
-             };
+            let highScorersNames = studentRecords.filter((student) => student.marks > 50).map((student) => student.name);
+            console.log(highScorersNames); // ['John', 'Wick']
+
         </pre>
-        <p>Que.6 Find the remainder</p>
+        <p>Que.6 This time we are required to print the sum of marks of the students with id > 120.</p>
         <pre>
-            const Find_the_remainder = (a,b) => {
-                let num = b%a;
-                return num;
-            };
+            let totalMarksIdGreaterThan120 = studentRecords.filter((student) => student.id > 120).reduce((total, student) => total + student.marks, 0);
+            console.log(totalMarksIdGreaterThan120); // 98 + 45 = 143
+
         </pre>
-        <p>Que.7 Multipy two Numbers</p>
+        <p>Que.7 This time we are required to print the total marks of the students with marks greater than 50 after a grace of 15 marks has been added to those students who scored less than 50.</p>
         <pre>
-            const Multiply_two_number = (a,b) => {
-                return a*b;
-            };
+            let updatedMarks = studentRecords.map((student) => {
+              if (student.marks < 50) {
+                student.marks += 15;
+              }
+              return student;
+              // updatedMarks = [
+              //   { name: "John", id: 123, marks: 98 },
+              //   { name: "Baba", id: 101, marks: 38 },
+              //   { name: "yaga", id: 200, marks: 60 },
+              //   { name: "Wick", id: 115, marks: 75 },
+              // ];
+            });
+            let highScorersWithUpdatedMarks = updatedMarks.filter((student) => student.marks > 50);
+            // highScorersWithUpdatedMarks = [
+            //   { name: "John", id: 123, marks: 98 },
+            //   { name: "yaga", id: 200, marks: 60 },
+            //   { name: "Wick", id: 115, marks: 75 },
+            // ];
+            let totalMarksAfterGrace = highScorersWithUpdatedMarks.reduce((total, student) => total + student.marks, 0); 
+              // totalMarksAfterGrace = 98 + 60 + 75 = 233
+            console.log(totalMarksAfterGrace); // 233
+
         </pre>
-        <p>Que.8 Marks Calculator</p>
+        <p>Que.8 Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. </p>
         <pre>            
-            const Sum = (A, B, C) => 
-            {
-              return A+B+C;
-            };
-            
-            const Average = (A, B, C) => 
-            {
-               return (A+B+C)/3;
-            };
+            let students = [
+              { name: "John", class: "A", rollNo: 1 },
+              { name: "Baba", class: "B", rollNo: 2 },
+              { name: "Yaga", class: "A", rollNo: 3 },
+              { name: "Wick", class: "B", rollNo: 4 },
+              { name: "Alice", class: "A", rollNo: 5 },
+              { name: "Bob", class: "B", rollNo: 6 },
+            ];
+            console.log(students); // [{name: 'John', class: 'A', rollNo: 1 }, {name: 'Baba', class: 'B', rollNo: 2 }, {name: 'Yaga', class: 'A', rollNo: 3 }, {name: 'Wick', class: 'B', rollNo: 4 }, {name: 'Alice', class: 'A', rollNo: 5 }, {name: 'Bob', class: 'B
+
         </pre>
     </div> 
     
-    --> 
-      <h1 style="margin-top: 200px;">coming soon...</h1>
-
+    
     <div class="container">
         <div class="row"><a href="./index-9.html">Back</a></div>
         <div class="row"><a href="./index-11.html">Next</a></div>
