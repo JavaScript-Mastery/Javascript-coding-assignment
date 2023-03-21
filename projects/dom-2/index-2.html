@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>access element</title>
+  </head>
+  <body>
+    <h1>This is text in h1 tag</h1>
+    <script>
+      const element = document.getElementsByTagName("h1");
+
+      console.log(element); // HTMLCollection [h1]
+
+      let content = element[0].innerText;
+      console.log(content); // This is text in h1 tag
+    </script>
+  </body>
+</html>

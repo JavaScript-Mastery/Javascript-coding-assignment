@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>timer clock using JS</title>
+  </head>
+  <body>
+    <h1 id="timer">00:00:00</h1>
+
+    <script>
+      setInterval(function () {
+        const timer = document.getElementById("timer");
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, "0");
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        const seconds = now.getSeconds().toString().padStart(2, "0");
+        const currentTime = hours + ":" + minutes + ":" + seconds;
+        timer.innerText = currentTime;
+      }, 1000);
+    </script>
+  </body>
+</html>

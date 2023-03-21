@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>click on button</title>
+  </head>
+  <body>
+    <p id="text">Hello world</p>
+    <button onclick="replaceText()">Replace Text</button>
+
+    <script>
+      function replaceText() {
+        const text = document.getElementById("text");
+        text.innerText = "Welcome to Elevation academy";
+      }
+    </script>
+  </body>
+</html>

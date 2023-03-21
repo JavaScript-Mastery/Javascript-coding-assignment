@@ -30,14 +30,17 @@ function maincheck() {
       document.querySelector(".score").textContent = InitScore;
     } else {
       document.querySelector(".message").textContent = "😊 Hurray You Won 😊";
-      document.body.style.backgroundColor = "#262626";
+      // document.body.style.backgroundImage = "url('./congras.gif')";
+      // document.body.style.backgroundRepeat = "no-repeat";
+      // document.body.style.backgroundSize = "cover";
       document.body.style.Color = "#ff0023";
+      document.body.style.backgroundColor = "green";
       InitScore--;
       document.querySelector(".score").textContent = InitScore;
       document.querySelector(".count").textContent = randomcount;
       document.querySelector(".count").style.height = "10rem";
       HighScore = InitScore;
-      document.querySelector(".HighScore").textContent = HighScore;
+      document.querySelector(".highScore").textContent = HighScore;
       document.querySelector(".check").style.visibility = "hidden";
     }
   } else {
