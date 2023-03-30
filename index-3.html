@@ -18,146 +18,142 @@
         <p>Que.1 Find the number of digits</p>
         
         <pre>
-                        
-            const Find_Digits = (N) => 
-            {
-            	 // Convert the number to a string
-                const numStr = N.toString();
-            
-                // Initialize the count to 0
-                let count = 0;
-            
-                // Iterate through each character in the string
-                for (const ch of numStr) {
-                    // If the character is a digit, increment the count
-                    if (/[0-9]/.test(ch)) {
-                        count++;
-                    }
-                }
-            
-                // Return the count
-                return count;
-            };
-            
-
+              
+  const Find_Digits = (N) => 
+  {
+  	 // Convert the number to a string
+      const numStr = N.toString();
+  
+      // Initialize the count to 0
+      let count = 0;
+  
+      // Iterate through each character in the string
+      for (const ch of numStr) {
+          // If the character is a digit, increment the count
+          if (/[0-9]/.test(ch)) {
+              count++;
+          }
+      }
+  
+      // Return the count
+      return count;
+  };           
         </pre>
         
         <p>Que.2 Find the Fives.</p>
         <pre>            
-            const Find_Five = (N) => 
-            {
-            	 // Convert the number to a string
-                const numStr = N.toString();
-            
-                // Initialize the count to 0
-                let count = 0;
-            
-                // Iterate through each character in the string
-                for (const ch of numStr) {
-                    // If the character is a digit, increment the count
-                    if (ch == '5') {
-                        count++;
-                    }
-                }
-            
-                // Return the count
-                return count;
-            };
+  const Find_Five = (N) => 
+  {
+  	 // Convert the number to a string
+      const numStr = N.toString();
+  
+      // Initialize the count to 0
+      let count = 0;
+  
+      // Iterate through each character in the string
+      for (const ch of numStr) {
+          // If the character is a digit, increment the count
+          if (ch == '5') {
+              count++;
+          }
+      }
+  
+      // Return the count
+      return count;
+  };
             
         </pre>
         
         <p>Que.3 Find Sum</p>
         <pre>
-            const findSum = (n) => {
-               let sum = 0;
-                for(let i=1; i<=n; i++){
-                  if(i%2===0){
-                    sum = sum+i;
-                  }
-                }
-                return sum;
-            };
+  const findSum = (n) => {
+     let sum = 0;
+      for(let i=1; i<=n; i++){
+        if(i%2===0){
+          sum = sum+i;
+        }
+      }
+      return sum;
+  };
 
         </pre>
         <p>Que.4 Find the sum of the digits of a given number.</p>
         <pre>
-            const Number_Sum = (N) => 
-            {
-            	// Convert the number to a string
-                const numStr = N.toString();
-            
-                
-                let sum = 0;
-                
-                for (const ch of numStr) {
-                   sum += Number(ch);
-                }
-            
-                return sum;
-            };
+  const Number_Sum = (N) => 
+  {
+  	// Convert the number to a string
+      const numStr = N.toString();
+  
+      
+      let sum = 0;
+      
+      for (const ch of numStr) {
+         sum += Number(ch);
+      }
+  
+      return sum;
+  };
 
 
         </pre>
 
         <p>Que.5 Print the Odds.</p>
         <pre>
-            const Print_Odd = (N) => 
-            {
-            	console.log("2"); // print 2 first
-            
-              for (let i = 3; i <= N; i += 2) { // start from 3 and increment by 2 to get only odd numbers
-                console.log(i);
-              }
-            };
+  const Print_Odd = (N) => 
+  {
+  	console.log("2"); // print 2 first
+  
+    for (let i = 3; i <= N; i += 2) { // start from 3 and increment by 2 to get only odd numbers
+      console.log(i);
+    }
+  };
         </pre>
         <p>Que.6 Print the Pattern.</p>
         <pre>            
-            const Print_pattern = (N) => 
-            {
-              for(let i=0; i < N; i++){
-                let row = "";
-                for(let j=0; j<=i; j++){
-                  row += "*";
-                }
-                console.log(row);
-              }
-            };
+  const Print_pattern = (N) => 
+  {
+    for(let i=0; i < N; i++){
+      let row = "";
+      for(let j=0; j<=i; j++){
+        row += "*";
+      }
+      console.log(row);
+    }
+  };
         </pre>
         <p>Que.7 Check whether a Number is a prime or not.</p>
         <pre>
-            const Prime_Check = (N) => 
-            {
-            	 if (N < 2) {
-                return "NO";
-              }
-              for (let i = 2; i <= Math.sqrt(N); i++) {
-                if (N % i === 0) {
-                  return "NO";
-                }
-              }
-              return "YES";
-            	
-            };
-
+  const Prime_Check = (N) => 
+  {
+  	 if (N < 2) {
+      return "NO";
+    }
+    for (let i = 2; i <= Math.sqrt(N); i++) {
+      if (N % i === 0) {
+        return "NO";
+      }
+    }
+    return "YES";
+  	
+  };
         </pre>
         <p>Que.8 Print Numbers</p>
         <pre>            
-            const printNumbers = (n) => {
-                for(let i=1; i<=n; i++){
-                  console.log(i);
-                }
-            };
+  const printNumbers = (n) => {
+      for(let i=1; i<=n; i++){
+        console.log(i);
+      }
+  };
 
         </pre>
         <p>Que.9 Print the Table</p>
-        <pre>            
-                        
-            const Print_Table = (N) => 
-            {
-            	for (let i = 1; i <= 10; i++) {
-                console.log(N + " * " + i + " = " + N*i);
-              }
-            };
+        <pre>         
+  const Print_Table = (N) => 
+  {
+  	for (let i = 1; i <= 10; i++) {
+      console.log(N + " * " + i + " = " + N*i);
+    }
+  };
         </pre>
     </div> 
     

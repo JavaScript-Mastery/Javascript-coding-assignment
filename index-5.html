@@ -17,186 +17,186 @@
         <p>Que.1 Count Characters</p>
         
         <pre>            
-            const countCharacters = (S) => 
-            {
-              let aCount = 0;
-              let dCount = 0;
-            
-              for (let i = 0; i < S.length; i++) {
-                if (S[i] === "A") {
-                  aCount++;
-                } else if (S[i] === "D") {
-                  dCount++;
-                }
-              }
-            
-              return [aCount, dCount];
-            }; 
+  const countCharacters = (S) => 
+  {
+    let aCount = 0;
+    let dCount = 0;
+  
+    for (let i = 0; i < S.length; i++) {
+      if (S[i] === "A") {
+        aCount++;
+      } else if (S[i] === "D") {
+        dCount++;
+      }
+    }
+  
+    return [aCount, dCount];
+  }; 
         </pre>
         
         <p>Que.2 Count the Heads</p>
         <pre>            
-            var Count_Occ = (s) => 
-            {
-              let count = {};
-                for (let i = 0; i < s.length; i++) {
-                    let char = s.charAt(i);
-                    if (count[char]) {
-                        count[char]++;
-                    } else {
-                        count[char] = 1;
-                    }
-                }
-                let result = "";
-                let keys = Object.keys(count).sort();
-                for (let i = 0; i < keys.length; i++) {
-                    if (count[keys[i]] > 1) {
-                        result += keys[i] + count[keys[i]];
-                    }
-                }
-            
-                return result;
-            }; 
+  var Count_Occ = (s) => 
+  {
+    let count = {};
+      for (let i = 0; i < s.length; i++) {
+          let char = s.charAt(i);
+          if (count[char]) {
+              count[char]++;
+          } else {
+              count[char] = 1;
+          }
+      }
+      let result = "";
+      let keys = Object.keys(count).sort();
+      for (let i = 0; i < keys.length; i++) {
+          if (count[keys[i]] > 1) {
+              result += keys[i] + count[keys[i]];
+          }
+      }
+  
+      return result;
+  }; 
 
         </pre>
         
         <p>Que.3 Count the Vowels</p>
         <pre>            
-            var Count_Vowels= (S) => 
-            {
-                let count = 0;
-                for(let i=0; i < S.length; i++){
-                  if(S[i]==='a' || S[i]==='e' || S[i]==='i' || S[i]==='o' || S[i]==='u'){
-                    count++;
-                  }
-                }
-                return count;
-            };
+  var Count_Vowels= (S) => 
+  {
+      let count = 0;
+      for(let i=0; i < S.length; i++){
+        if(S[i]==='a' || S[i]==='e' || S[i]==='i' || S[i]==='o' || S[i]==='u'){
+          count++;
+        }
+      }
+      return count;
+  };
         </pre>
         <p>Que.4 Concatenate the Strings</p>
         <pre>            
-            var Concatenate_Strings = (S1, S2) => 
-            {
-                return S1.concat('', S2);
-            };
+  var Concatenate_Strings = (S1, S2) => 
+  {
+      return S1.concat('', S2);
+  };
         </pre>
 
         <p>Que.5 Find Length</p>
         <pre>            
-            const findLength = (S) => 
-            {
-                return S.length;
-            };
+  const findLength = (S) => 
+  {
+      return S.length;
+  };
         </pre>
         <p>Que.6 Find the Winner</p>
         <pre>             
-            var Game_Winner = (S) => 
-            {
-              let adityaWins = 0;
-                let danishWins = 0;
-                
-                for(let i = 0; i < S.length; i++) {
-                    if(S[i] === 'A') {
-                        adityaWins++;
-                    } else {
-                        danishWins++;
-                    }
-                }
-                
-                if(adityaWins > danishWins) {
-                    return 'Aditya';
-                } else if(danishWins > adityaWins) {
-                    return 'Danish';
-                } else {
-                    return 'Draw';
-                }
-            } 
+  var Game_Winner = (S) => 
+  {
+    let adityaWins = 0;
+      let danishWins = 0;
+      
+      for(let i = 0; i < S.length; i++) {
+          if(S[i] === 'A') {
+              adityaWins++;
+          } else {
+              danishWins++;
+          }
+      }
+      
+      if(adityaWins > danishWins) {
+          return 'Aditya';
+      } else if(danishWins > adityaWins) {
+          return 'Danish';
+      } else {
+          return 'Draw';
+      }
+  } 
         </pre>
         <p>Que.7 Join Strings</p>
         <pre>            
-            const joinStrings = (S, P) => 
-            {
-                return S+P;
-            };
+  const joinStrings = (S, P) => 
+  {
+      return S+P;
+  };
         </pre>
         <p>Que.8 Plaindrome Check</p>
         <pre>
-            var Palin_Check = (str) =>
-            {
-            	// Remove all non-alphanumeric characters from the string
-              str = str.replace(/[^0-9a-zA-Z]/g, '');
-            
-              // Check if the string is equal to its reverse
-              if (str === str.split('').reverse().join('')) {
-                return "True";
-              } else {
-                return "False";
-              }
-            }
+  var Palin_Check = (str) =>
+  {
+  	// Remove all non-alphanumeric characters from the string
+    str = str.replace(/[^0-9a-zA-Z]/g, '');
+  
+    // Check if the string is equal to its reverse
+    if (str === str.split('').reverse().join('')) {
+      return "True";
+    } else {
+      return "False";
+    }
+  }
         </pre>
         <p>Que.9 Reverse the String</p>
         <pre>
-            var Reverse_String = (str) => 
-            {
-                let str2 = "";
-                for(let i = str.length-1; i>=0; i--){
-                  str2 +=str[i];
-                }
-                return str2;
-            }; 
+  var Reverse_String = (str) => 
+  {
+      let str2 = "";
+      for(let i = str.length-1; i>=0; i--){
+        str2 +=str[i];
+      }
+      return str2;
+  }; 
         </pre>
         <p>Que.10 Match the Strings</p>
         <pre>
-            var String_Match = (S1,S2) => 
-            {
-                if(S1===S2){
-                  return "YES";
-                }
-                else{
-                  return "NO";
-                }
-            };
+  var String_Match = (S1,S2) => 
+  {
+      if(S1===S2){
+        return "YES";
+      }
+      else{
+        return "NO";
+      }
+  };
         </pre>
         <p>Que.11 String Replace</p>
         <pre> 
-            var Replace = (S, pattern , text) => 
-            {
-                return S.replace(pattern, text);
-            };
+  var Replace = (S, pattern , text) => 
+  {
+      return S.replace(pattern, text);
+  };
         </pre>
         <p>Que.12 Split the String</p>
         <pre>            
-            var Split_the_string = (S) => 
-            {
-              // Split the string by spaces using the split() method
-              // Return the array of strings
-              return S.split(" ");     
-            };
+  var Split_the_string = (S) => 
+  {
+    // Split the string by spaces using the split() method
+    // Return the array of strings
+    return S.split(" ");     
+  };
  
         </pre>
         <p>Que.13 Count the Vowels and Consonants</p>
         <pre>  
-            var Count_Vowels= (S) => 
-            {
-                Count_V=0;
-                for(let i=0; i < S.length; i++){
-                  if(S[i]==='a'||S[i]==='e'||S[i]==='i'||S[i]==='o'|| S[i]==='u'){
-                   Count_V++;
-                  }
-                }
-                return  Count_V;
-            };
-            var Count_Consonants= (S) => 
-            {
-                Count_C=0;
-                for(let i=0; i < S.length; i++){
-                  if(S[i]!=='a' && S[i]!=='e' && S[i]!=='i' && S[i]!=='o' && S[i]!=='u'){
-                    Count_C++;
-                  }
-                }
-                
-                return  Count_C;
-            };
+  var Count_Vowels= (S) => 
+  {
+      Count_V=0;
+      for(let i=0; i < S.length; i++){
+        if(S[i]==='a'||S[i]==='e'||S[i]==='i'||S[i]==='o'|| S[i]==='u'){
+         Count_V++;
+        }
+      }
+      return  Count_V;
+  };
+  var Count_Consonants= (S) => 
+  {
+      Count_C=0;
+      for(let i=0; i < S.length; i++){
+        if(S[i]!=='a' && S[i]!=='e' && S[i]!=='i' && S[i]!=='o' && S[i]!=='u'){
+          Count_C++;
+        }
+      }
+      
+      return  Count_C;
+  };
   
         </pre>
     </div>     

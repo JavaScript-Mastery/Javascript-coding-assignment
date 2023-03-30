@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que.4</title>
+</head>
+<body>
+    <script>
+        function calculateAngle(length) {
+  return function(breadth) {
+    const radian = Math.atan2(breadth, length);
+    const angle = radian * (180 / Math.PI);
+    return angle;
+  }
+}
+const angleFunction = calculateAngle(3); // pass length as parameter
+const angle = angleFunction(4); // pass breadth as parameter
+console.log(angle); // Output: 53.13010235415598
+    </script>
+</body>
+</html>

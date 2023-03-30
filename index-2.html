@@ -14,147 +14,146 @@
     <div class="Que">        
         <p>Que.1 Calculator</p>        
         <pre>
-            
-            const Calculator = (A, B, C) => 
-            {
-              switch (A) {
-                case "+":
-                  return B + C;
-                case "-":
-                  return B - C;
-                case "*":
-                  return B * C;
-                case "/":
-                  return B / C;
-                default:
-                  return "Invalid operator";
-              }
-                
-            };
+  const Calculator = (A, B, C) => 
+  {
+    switch (A) {
+      case "+":
+        return B + C;
+      case "-":
+        return B - C;
+      case "*":
+        return B * C;
+      case "/":
+        return B / C;
+      default:
+        return "Invalid operator";
+    }
+      
+  };
         </pre>
         
         <p>Que.2 Check whether the condition is fulfilled or not?</p>        <pre>
                       
-          const Check_divisibility = (N) => {          
-            if (N % 6 === 0 && N % 9 === 0) {
-              return `Divisible by both`;
-            } else {
-              return `Not Divisible by both`;
-            }
-          };
+  const Check_divisibility = (N) => {          
+    if (N % 6 === 0 && N % 9 === 0) {
+      return `Divisible by both`;
+    } else {
+      return `Not Divisible by both`;
+    }
+  };
 
         </pre>
         
         <p>Que.3 Eligible Voter</p>
         <pre>            
-          const isEligible = (a) => {
-              if(a>=18){
-                return 'Eligible for Voting';
-              }
-              else{
-                return 'Not Eligible for Voting'
-              }
-          };
+  const isEligible = (a) => {
+    if(a>=18){
+      return 'Eligible for Voting';
+    }
+    else{
+      return 'Not Eligible for Voting'
+    }
+  };
         </pre>
         <p>Que.4 Find Relation</p>
         <pre>
                       
-          const findRelation = (x,y) => {
-              if (x < y) {
-              return `${x} is smaller than ${y}`;
-            } else if (x > y) {
-              return `${x} is greater than ${y}`;
-            } else {
-              return `${x} is equal to ${y}`;
-            }
-          };
+  const findRelation = (x,y) => {
+      if (x < y) {
+      return `${x} is smaller than ${y}`;
+    } else if (x > y) {
+      return `${x} is greater than ${y}`;
+    } else {
+      return `${x} is equal to ${y}`;
+    }
+  };
         </pre>
 
         <p>Que.5 Find Grades</p>
 
         <pre>                      
-          const findGrades = (a) => {
-              switch (true) {
-                case a <= 10:
-                  return 'E';
-                case a <= 20:
-                  return 'D';
-                case a <= 30:
-                  return 'C';
-                case a <= 40:
-                  return 'B';
-                case a <= 50:
-                  return 'A';
-                default:
-                  return 'Invalid marks';
-              }
-          };
+  const findGrades = (a) => {
+    switch (true) {
+      case a <= 10:
+        return 'E';
+      case a <= 20:
+        return 'D';
+      case a <= 30:
+        return 'C';
+      case a <= 40:
+        return 'B';
+      case a <= 50:
+        return 'A';
+      default:
+        return 'Invalid marks';
+    }
+  };
         </pre>
 
         <p>Que.6 Get Value</p>
         <pre>                      
-          const getValue = (a) => {
-             if(a==='P' || a==='p'){
-               return 'PrepBytes';
-             }
-             else if(a==='Z' || a==='z'){
-               return 'Zenith';
-             }
-             else if(a==='E' || a==='e'){
-               return 'Expert Coder';
-             }
-             else if(a==='D' || a==='d'){
-               return 'Data Structure';
-             }
-            
-          };   
+  const getValue = (a) => {
+     if(a==='P' || a==='p'){
+       return 'PrepBytes';
+     }
+     else if(a==='Z' || a==='z'){
+       return 'Zenith';
+     }
+     else if(a==='E' || a==='e'){
+       return 'Expert Coder';
+     }
+     else if(a==='D' || a==='d'){
+       return 'Data Structure';
+     }
+    
+  };   
         </pre>
         <p>Que.7 Find the maximum out of three numbers.</p>
         <pre>
                       
-          const Max_out_of_three = (A,B,C) => {
-              let max = A;
-            if (B > max) {
-              max = B;
-            }
-            if (C > max) {
-              max = C;
-            }
-          
-            // If all three numbers are the same, return 1
-            if (A === B && B === C) {
-              return -1;
-            } else {
-              // Otherwise, return the maximum of the three numbers
-              return max;
-            }
-          };
+  const Max_out_of_three = (A,B,C) => {
+      let max = A;
+    if (B > max) {
+      max = B;
+    }
+    if (C > max) {
+      max = C;
+    }
+  
+    // If all three numbers are the same, return 1
+    if (A === B && B === C) {
+      return -1;
+    } else {
+      // Otherwise, return the maximum of the three numbers
+      return max;
+    }
+  };
           
         </pre>
         <p>Que.8 Second Smallest</p>
         <pre>         
-          const findSndSmallest = (x,y,z) => {
-              const sorted = [x, y, z].sort((a, b) => a - b);
-          
-            // Return the second smallest element (the middle element of the sorted array)
-            return sorted[1];
-          };
+  const findSndSmallest = (x,y,z) => {
+      const sorted = [x, y, z].sort((a, b) => a - b);
+  
+    // Return the second smallest element (the middle element of the sorted array)
+    return sorted[1];
+  };
         </pre>
         <p>Que.8 Check whether the triangle is Acute or Obtuse</p>
         <pre>
-          const Triangle_Check = (A,B,C) => {            
-              if (A + B + C === 180) {            
-                // The triangle is valid, so check if it is acute or obtuse
-                if (A < 90 && B < 90 && C < 90) {
-                  return 'acute';            
-                } else {            
-                  return 'obtuse';            
-                }            
-              } else {            
-                // The triangle is invalid            
-                return 'The triangle is invalid';            
-              } 
-            };          
+  const Triangle_Check = (A,B,C) => {            
+    if (A + B + C === 180) {            
+      // The triangle is valid, so check if it is acute or obtuse
+      if (A < 90 && B < 90 && C < 90) {
+        return 'acute';            
+      } else {            
+        return 'obtuse';            
+      }            
+    } else {            
+      // The triangle is invalid            
+      return 'The triangle is invalid';            
+    } 
+  };          
         </pre>
     </div>  
 

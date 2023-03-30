@@ -1,106 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Assignment">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Assignment" />
     <title>Coding Assisement</title>
-    <link rel="stylesheet" href="./style.css">    
-</head>
-<body>
- 
-    <h2>14. Closures </h2>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h2>14. Closures</h2>
 
-    
+    <!-- ====== write code -->
 
-         <!-- ====== write code -->
-    <!--
-    <div class="Que">   
-        <p>Que.1 Add two Numbers</p>
+    <div class="Que">
+      <p><strong>Que.1</strong></p>
+      <pre style="color: #fff; background-color: #000">
+  function counter(){
+      var counter = 0;
+  
+      function IncreaseCounter() {
+          return counter += 1;
+      };
+  
+      return IncreaseCounter;
+  }
+  
+  var counter = counter();
+  alert(counter());
+  alert(counter());
+  alert(counter());
+  alert(counter());
+        </pre
+      >
+      <p>Output: <a href="./projects/project-14/que-1.html" target="_blank" rel="noopener noreferrer">Click here</a></p>
+      <p
+        style="
+          border: 2px solid green;
+          width: 70%;
+          padding: 10px;
+          border-radius: 8px;
+          background-color: bisque;
+          display: flex;
+        "
+      >
+        <strong>Explaination: &nbsp;</strong>
+        <span style="color: rgb(3, 92, 3); font-style: italic;">&nbsp; The code calls the returned function four times using the `alert` function to display the result of each call. The expected output is a series of alerts showing the numbers 1, 2, 3, and 4, each on a separate line.</span>
+      </p>
+      <p><strong>Que.2</strong></p>
+      <pre style="color: #fff; background-color: #000">
+  let count = 0;
+  (function () {
+    if (count === 0) {
+      let count = 1;
+      console.log(count); // What is logged?
+    }
+    console.log(count); // What is logged?
+  })();
+        </pre
+      >
+           <p>Output Link: <a href="./projects/project-14/Que-2.html" target="_blank" rel="noopener noreferrer">Click here</a></p>
+      <p
+        style="
+          border: 2px solid green;
+          width: 70%;
+          padding: 10px;
+          border-radius: 8px;
+          background-color: bisque;
+          display: flex;
+        "
+      >
+      
+        <strong>Output: &nbsp;</strong>
+        <span>1 <br> 0</span>
+      </p>
+      <p><strong>Que.3</strong></p>
+      <pre style="color: #fff; background-color: #000">
+  for (var i = 0; i < 3; i++) {
+    setTimeout(function log() {
+      console.log(i); // What is logged?
+    }, 1000);
+  }       
+        </pre
+      >
+       <p>Output Link: <a href="./projects/project-14/Que-3.html" target="_blank" rel="noopener noreferrer">Click here</a></p>
+      
+      <p
+        style="
+          border: 2px solid green;
+          width: 70%;
+          padding: 10px;
+          border-radius: 8px;
+          background-color: bisque;
+          display: flex;
+        "
+      >
+        <strong>Output: &nbsp;</strong>
+        <span>3 <br>3 <br>3</span>
+      </p>
+      <p
+        style="
+          border: 2px solid green;
+          width: 70%;
+          padding: 10px;
+          border-radius: 8px;
+          background-color: bisque;
+          display: flex;
+        "
+      >
+        <strong>Explaination: &nbsp;</strong>
+        <span style="font-size: 18px;">          
+           &nbsp;  1. The for loop runs three times, with i starting at 0 and incrementing by 1 each time. <br> <br>
+          2. For each iteration of the loop, a setTimeout function is called. This function sets a timer to execute a callback function (in this case, log) after a specified delay (in this case, 1000 milliseconds or 1 second).<br> <br>
+          3. When the timer expires, the callback function is added to the event queue to be executed by the JavaScript runtime when it is available. <br> <br>
+          4. However, before the callback function is executed, the for loop has completed its iterations, and i has been left with the value of 3. <br> <br>
+          5. Therefore, when each callback function is executed, it logs the current value of i, which is 3. <br> <br>
+        </span>
+      </p>
+      <p>
+        <strong>Que.4</strong> angle using inner function. In this case outer function should
+        accept parameter length and inner function should accept parameter
+        breadth.
+      </p>
+      <pre>
+  function calculateAngle(length) {
+    return function(breadth) {
+      const radian = Math.atan2(breadth, length);
+      const angle = radian * (180 / Math.PI);
+      return angle;
+    }
+  }
+  const angleFunction = calculateAngle(3); // pass length as parameter
+  const angle = angleFunction(4); // pass breadth as parameter
+  console.log(angle); // Output: 53.13010235415598
+      </pre>
+      <p>Output Link: <a href="./projects/project-14/Que-4.html" target="_blank" rel="noopener noreferrer">Click here</a></p>
+      
+      <p
+        style="
+          border: 2px solid green;
+          width: 70%;
+          padding: 10px;
+          border-radius: 8px;
+          background-color: bisque;
+          display: flex;
+        "
+      >      
         
-        <pre>
-            const AddTwoNumbers = (a,b) => {
-                return a+b;
-            };
-        </pre>
-        
-        <p>Que.2 Find if the conditions are obeyed or not?</p>
-        <pre>
-            const Is_Valid = (a,b) => {
-                if(a<10 && a>b){
-                  return true;
-                }
-                else{
-                  return false;
-                }
-            };
-        </pre>
-        
-        <p>Que.3 Check the conditons</p>
-        <pre>
-            const Check = (A, B) => 
-            {
-                if (A % 10 === 0 && B % 10 === 0) {
-                return true;
-              } else if (A % 10 !== 0 && B % 10 !== 0) {
-                return false;
-              } else {
-                return true;
-              }
-            };
-        </pre>
-        <p>Que.4 Find the first digit of a 4 digit number</p>
-        <pre>
-            const First_Digit = (n) => {
-                let num = Math.floor(n / 1000);
-                return num;
-            };
-        </pre>
+        <strong>Output: &nbsp;</strong>
+        <span>53.13010235415598
+</span>
+      </p>
+      <p>
+        <strong>Que.5</strong> Take a variable in outer function and create an inner function to
+        increase the counter every time it is called
+      </p>
+      <pre>
+  function outer() {
+    let count = 0;
+  
+    function inner() {
+      count++;
+      console.log(`Count is now ${count}`);
+    }
+  
+    return inner;
+  }
+  
+  // Create a new function that has access to the count variable
+  const incrementCount = outer();
+  
+  // Call the inner function multiple times to see the count increase
+  incrementCount(); // Count is now 1
+  incrementCount(); // Count is now 2
+  incrementCount(); // Count is now 3
+      </pre>
+      <p>Output Link: <a href="./projects/project-14/Que-5.html" target="_blank" rel="noopener noreferrer">Click here</a></p>
+      <p
+        style="
+          border: 2px solid green;
+          width: 70%;
+          padding: 10px;
+          border-radius: 8px;
+          background-color: bisque;
+          display: flex;
+        "
+      >
+        <strong>Output: &nbsp;</strong> <span>
+          Count is now 1 <br /> Count is now 2 <br /> Count is now 3</span>
+      </p>
 
-        <p>Que.5 Find the last digit of a 4 digit number</p>
-        <pre>
-            const Last_Digit = (n) => {
-                let num = Math.floor(n % 10);  
-                // Isolate the first digit using integer division
-                return num;
-             };
-        </pre>
-        <p>Que.6 Find the remainder</p>
-        <pre>
-            const Find_the_remainder = (a,b) => {
-                let num = b%a;
-                return num;
-            };
-        </pre>
-        <p>Que.7 Multipy two Numbers</p>
-        <pre>
-            const Multiply_two_number = (a,b) => {
-                return a*b;
-            };
-        </pre>
-        <p>Que.8 Marks Calculator</p>
-        <pre>            
-            const Sum = (A, B, C) => 
-            {
-              return A+B+C;
-            };
-            
-            const Average = (A, B, C) => 
-            {
-               return (A+B+C)/3;
-            };
-        </pre>
-    </div> 
-    
-    --> 
-      <h1 style="margin-top: 200px;">coming soon...</h1>
-
-    <div class="container">
-        <div class="row"><a href="./index-13.html">Back</a></div>
-        <div class="row"><a href="./index-15.html">Next</a></div>
+      <p><strong>Que.6</strong> Print Output</p>
+      <pre style="color: #fff; background-color: #000">
+  var a = 12;
+  (function () {
+    alert(a);
+  })(); 
+        </pre
+      >
+      <p>Output Link: <a href="./projects/project-14/Que-6.html" target="_blank" rel="noopener noreferrer">Click here</a></p>
+      <p
+        style="
+          border: 2px solid green;
+          width: 70%;
+          padding: 10px;
+          border-radius: 8px;
+          background-color: bisque;
+          display: flex;
+        "
+      >
+        <strong>Output: &nbsp;</strong>
+        <span>12</span>
+      </p>
+      <p><strong>Que.7</strong></p>
+      <pre style="color: #fff; background-color: #000">
+  var a = 10;
+  var x = (function () {
+    var a = 12;
+    return function () {
+      alert(a);
+    };
+  })();
+  x();
+        </pre
+      >
+      <p>Output Link: <a href="./projects/project-14/Que-7.html" target="_blank" rel="noopener noreferrer">Click here</a></p>
+      <p
+        style="
+          border: 2px solid green;
+          width: 70%;
+          padding: 10px;
+          border-radius: 8px;
+          background-color: bisque;
+          display: flex;
+        "
+      >
+        <strong>Output: &nbsp;</strong>
+        <span>12</span>
+      </p>
+      <p><strong>Que.8</strong></p>
+      <pre style="color: #fff; background-color: #000">
+  var globalVar = "xyz";
+  (function outerFunc(outerArg) {
+      var outerVar = 'a';
+      
+      (function innerFunc(innerArg) {
+      var innerVar = 'b';
+      
+      console.log(
+          "outerArg = " + outerArg + "\n" +
+          "innerArg = " + innerArg + "\n" +
+          "outerVar = " + outerVar + "\n" +
+          "innerVar = " + innerVar + "\n" +
+          "globalVar = " + globalVar);           
+      })(456);
+  })(123);
+    </pre>
+    <p>Output Link: <a href="./projects/project-14/Que.8.html" target="_blank" rel="noopener noreferrer">Click here</a></p>
+      <p
+        style="
+          border: 2px solid green;
+          width: 70%;
+          padding: 10px;
+          border-radius: 8px;
+          background-color: bisque;
+          display: flex;
+        "
+      >
+        <strong>Output: &nbsp;</strong>
+        <span>outerArg = 123 <br />
+innerArg = 456 <br />
+outerVar = a <br />
+innerVar = b <br />
+globalVar = xyz</span>
+      </p>
     </div>
 
-      
-</body>
+    <div class="container">
+      <div class="row"><a href="./index-13.html">Back</a></div>
+      <div class="row"><a href="./index-15.html">Next</a></div>
+    </div>
+  </body>
 </html>

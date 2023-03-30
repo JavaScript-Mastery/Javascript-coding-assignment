@@ -17,180 +17,178 @@
         <p>Que.1 Find the Product.</p>
         
         <pre>            
-            const Find_Prod = (array, N) => 
-            {
-               let Prod=1; // declare Prod and initialize with 1
-               
-               for(let i=0; i&lt;N; i++){
-                 Prod *=array[i]; // Prod= 1x1x2x3x4x5= 120
-               }
-               return Prod; // 120
-            };
+  const Find_Prod = (array, N) => 
+  {
+     let Prod=1; // declare Prod and initialize with 1
+     
+     for(let i=0; i&lt;N; i++){
+       Prod *=array[i]; // Prod= 1x1x2x3x4x5= 120
+     }
+     return Prod; // 120
+  };
 
         </pre>
         
         <p>Que.2 Find the Sum.</p>
         <pre>
             
-            const Find_Sum = (array, N) => 
-            {
-              let sum = 0;
-              for(let i=0; i&lt;N; i++){
-                sum = sum + array[i];
-              }
-              return sum;
-            
-            };
+  const Find_Sum = (array, N) => 
+  {
+    let sum = 0;
+    for(let i=0; i&lt;N; i++){
+      sum = sum + array[i];
+    }
+    return sum;
+  
+  };
         </pre>
         
         <p>Que.3 Count Occurrences</p>
         <pre>
-            const findCount = (N, K, Arr) => 
-            {
-              let count = 0;
-                for(let i=0; i&lt;N; i++){
-                  if(Arr[i]===K){ 
-                    // if array element value and data type is equal to k then increase count value
-                    count++;
-                  }
-                  
-                }
-                return count; // return final result of count
-            };
+  const findCount = (N, K, Arr) => 
+  {
+    let count = 0;
+      for(let i=0; i&lt;N; i++){
+        if(Arr[i]===K){ 
+          // if array element value and data type is equal to k then increase count value
+          count++;
+        }
+        
+      }
+      return count; // return final result of count
+  };
         </pre>
         <p>Que.4 Even Odd</p>
         <pre>            
-            const findEvenOdd = (N, Arr) => 
-            {
-                let Odd = 0; // Declare and initilize with 0 of Odd
-                let even = 0; // Declare and initilize with 0 of even
-                for(let i=0; i&lt;N; i++){ // Now check every array element
-                  if(Arr[i]%2===0){  // for even element
-                    even += Arr[i];
-                  }
-                  else{
-                    Odd += Arr[i]; // for odd element
-                  }
-                }
-                 return [even, Odd]; // final result sum of odd number's and even number's
-            };          
+  const findEvenOdd = (N, Arr) => 
+  {
+      let Odd = 0; // Declare and initilize with 0 of Odd
+      let even = 0; // Declare and initilize with 0 of even
+      for(let i=0; i&lt;N; i++){ // Now check every array element
+        if(Arr[i]%2===0){  // for even element
+          even += Arr[i];
+        }
+        else{
+          Odd += Arr[i]; // for odd element
+        }
+      }
+       return [even, Odd]; // final result sum of odd number's and even number's
+  };          
 
         </pre>
 
         <p>Que.5 Find whether the number is present or not</p>
         <pre>            
-            const Find_Num = (array,N,M) => 
-            {
-              for(let i=0; i&lt;N; i++){
-                if(array[i]===M){
-                  return "YES";
-                }
-                
-              }
-              return "NO";
-            };
+  const Find_Num = (array,N,M) => 
+  {
+    for(let i=0; i&lt;N; i++){
+      if(array[i]===M){
+        return "YES";
+      }
+      
+    }
+    return "NO";
+  };
         </pre>
         <p>Que.6 Higher Age</p>
         <pre>            
-            const highAge = (N, Arr) => 
-            {
-                const answer =[]; // other array
-                for(let i in Arr){
-                  if(Arr[i]>=18){
-                    answer.push(Arr[i]);
-                  }
-                }
-                return answer;
-            }; 
+  const highAge = (N, Arr) => 
+  {
+      const answer =[]; // other array
+      for(let i in Arr){
+        if(Arr[i]>=18){
+          answer.push(Arr[i]);
+        }
+      }
+      return answer;
+  }; 
         </pre>
         <p>Que.7 Increment the Array Elements</p>
         <pre>
-            const Inc_Arr = (array,N) => 
-            {
-              const Ans = array.map(x => x + 1); // map is a built-in method of an array
-              // x is current array and  x + 1 is increase 1 of array's per value
-              console.log(Ans.join(" "));
-            }; 
+  const Inc_Arr = (array,N) => 
+  {
+    const Ans = array.map(x => x + 1); // map is a built-in method of an array
+    // x is current array and  x + 1 is increase 1 of array's per value
+    console.log(Ans.join(" "));
+  }; 
         </pre>
         <p>Que.8 Pass or Fail</p>
-        <pre>            
-            
-            const isAllPass = (N, Arr) => 
-            {
-              for(let i=0; i < N; i++){
-                for(let j=i+1; j < N; j++){
-                  if(Arr[i]>=32 && Arr[j]>=32){
-                    return "YES";
-                  }
-                  else{
-                    return "NO";
-                  }
-                }
-              } 
-              return "No";
-            };        
+        <pre> 
+  const isAllPass = (N, Arr) => 
+  {
+    for(let i=0; i < N; i++){
+      for(let j=i+1; j < N; j++){
+        if(Arr[i]>=32 && Arr[j]>=32){
+          return "YES";
+        }
+        else{
+          return "NO";
+        }
+      }
+    } 
+    return "No";
+  };        
         </pre>
         <p>Que.9 Unique Color Shirt</p>
         <pre>
-            function Unique_Shirts (arr,N) {
-             const num = []; 
-             let Count = 0; // count of unique colors
-                         
-             for (let i = 0; i < N; i++) {
-               const color = arr[i];
-               num[color] = (num[color] || 0) + 1;
-             }
-              // count the number of unique colors
-             for (let color in num) {
-               if (num[color] === 1) {
-                 Count++;
-               }
-             }
-            
-              return Count;
-            }
+  function Unique_Shirts (arr,N) {
+   const num = []; 
+   let Count = 0; // count of unique colors
+               
+   for (let i = 0; i < N; i++) {
+     const color = arr[i];
+     num[color] = (num[color] || 0) + 1;
+   }
+    // count the number of unique colors
+   for (let color in num) {
+     if (num[color] === 1) {
+       Count++;
+     }
+   }
+  
+    return Count;
+  }
         </pre>
         <p>Que.10 Min and Max</p>
         <pre>            
-             function arrayMin(arr) {
-              let minVal = arr[0];
-              for (let i = 1; i < arr.length; i++) {
-                if (arr[i] < minVal) {
-                  minVal = arr[i];
-                }
-                
-              }
-              
-              return minVal;
-            }
-            
-            function arrayMax(arr) {
-             let maxVal = arr[0];
-             for (let i = 1; i < arr.length; i++) {
-                if (arr[i] > maxVal) {
-                  maxVal = arr[i];
-                }
-              }
-              return maxVal;
-             
-            }
+  function arrayMin(arr) {
+    let minVal = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i] < minVal) {
+        minVal = arr[i];
+      }
+      
+    }
+    
+    return minVal;
+  }
+  
+  function arrayMax(arr) {
+   let maxVal = arr[0];
+   for (let i = 1; i < arr.length; i++) {
+      if (arr[i] > maxVal) {
+        maxVal = arr[i];
+      }
+    }
+    return maxVal;
+   
+  }
         </pre>
         <p>Que.11 Birthday Game</p>
         <pre>
-            function Birthday_Game(arr,D ,M) {
-              let count = 0;
-              for (let i = 0; i <= arr.length - M; i++) {
-                  let sum = 0;
-                  for (let j = i; j < i + M; j++) {
-                      sum += arr[j]; 
-                  }
-                  if (sum === D) {
-                      count++;
-                  }
-              }
-              return count;
-
-            }
+  function Birthday_Game(arr,D ,M) {
+    let count = 0;
+    for (let i = 0; i <= arr.length - M; i++) {
+        let sum = 0;
+        for (let j = i; j < i + M; j++) {
+            sum += arr[j]; 
+        }
+        if (sum === D) {
+            count++;
+        }
+    }
+    return count;
+  }
         </pre>
     </div> 
     

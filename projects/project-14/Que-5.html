@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que.5</title>
+</head>
+<body>
+    <script>
+        function outer() {
+    let count = 0;
+  
+    function inner() {
+      count++;
+      console.log(`Count is now ${count}`);
+    }
+  
+    return inner;
+  }
+  
+  // Create a new function that has access to the count variable
+  const incrementCount = outer();
+  
+  // Call the inner function multiple times to see the count increase
+  incrementCount(); // Count is now 1
+  incrementCount(); // Count is now 2
+  incrementCount(); // Count is now 3
+    </script>
+</body>
+</html>

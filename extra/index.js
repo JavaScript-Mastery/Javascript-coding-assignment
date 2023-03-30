@@ -1,7 +1,15 @@
-const greet = function (name) {
-  return function (m) {
-    console.log(`Hi!! ${name}, ${m}`);
-  };
-};
-const greet_message = greet("EA19");
-greet_message("Welcome To PrepBytes");
+function counter() {
+  var counter = 0;
+
+  function IncreaseCounter() {
+    return (counter += 1);
+  }
+
+  return IncreaseCounter;
+}
+
+var counter = counter();
+alert(counter());
+alert(counter());
+alert(counter());
+alert(counter());
