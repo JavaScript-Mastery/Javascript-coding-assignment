@@ -24,20 +24,20 @@
       </p>
 
       <pre>
-            &lt;!DOCTYPE html&gt;
-            &lt;html&gt;
-              &lt;head&gt;
-                &lt;title&gt;access element&lt;/title&gt;
-              &lt;/head&gt;
-              &lt;body&gt;
-              &lt;h1 id="text"&gt;This is text id&lt;/h1&gt;
-            
-              &lt;script&gt;
-                const element = document.getElementById("text");
-                console.log(element); // &lt;h1 id="text"&gt;This is text id&lt;/h1&gt;
-              &lt;/script&gt;
-            &lt;/body&gt;
-            &lt;/html&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;access element&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1 id="text"&gt;This is text id&lt;/h1&gt;
+  
+    &lt;script&gt;
+      const element = document.getElementById("text");
+      console.log(element); // &lt;h1 id="text"&gt;This is text id&lt;/h1&gt;
+    &lt;/script&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
 
         </pre
       >
@@ -46,24 +46,24 @@
         <br> Project: <a href="./projects/dom-2/index-2.html">click Here</a>
       </p>
       <pre>
-          &lt;!DOCTYPE html&gt;
-          &lt;html&gt;
-            &lt;head&gt;
-              &lt;title&gt;access element&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-            &lt;h1&gt;This is text in h1 tag&lt;/h1&gt;
-            &lt;script&gt;
-              const element = document.getElementsByTagName("h1");
-              
-              console.log(element); // HTMLCollection [h1]
-             
-              let content = element[0].innerText;
-              console.log(content); // This is text in h1 tag
-          
-            &lt;/script&gt;
-          &lt;/body&gt;
-          &lt;/html&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;access element&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;This is text in h1 tag&lt;/h1&gt;
+    &lt;script&gt;
+      const element = document.getElementsByTagName("h1");
+      
+      console.log(element); // HTMLCollection [h1]
+     
+      let content = element[0].innerText;
+      console.log(content); // This is text in h1 tag
+  
+    &lt;/script&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
 
       </pre
       >
@@ -73,24 +73,24 @@
         <br> Project: <a href="./projects/dom-2/index-3.html">click Here</a>
       </p>
       <pre>
-          &lt;!DOCTYPE html&gt;
-          &lt;html&gt;
-            &lt;head&gt;
-              &lt;title&gt;access element&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-            &lt;div class="box">box-1&lt;/div&gt;
-            &lt;script&gt;
-              const element = document.getElementsByClassName("box");
-              
-              console.log(element); // HTMLCollection(1)
-             
-              let content = element[0].innerText;
-              console.log(content); // box-1
-          
-            &lt;/script&gt;
-          &lt;/body&gt;
-          &lt;/html&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;access element&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;div class="box">box-1&lt;/div&gt;
+    &lt;script&gt;
+      const element = document.getElementsByClassName("box");
+      
+      console.log(element); // HTMLCollection(1)
+     
+      let content = element[0].innerText;
+      console.log(content); // box-1
+  
+    &lt;/script&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
 
       </pre
       >
@@ -100,19 +100,19 @@
         <br> Project: <a href="./projects/dom-2/index-4.html">click Here</a>
       </p>
       <pre>
-            &lt;!DOCTYPE html&gt;
-            &lt;html&gt;
-            &lt;head&gt;
-            	&lt;title&gt;Change heading text using DOM functions&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-            	&lt;h1 id="myHeading"&gt;Hello&lt;/h1&gt;
-            	&lt;script&gt;
-            		const heading = document.getElementById("myHeading");
-            		heading.textContent = "Hello World";
-            	&lt;/script&gt;
-            &lt;/body&gt;
-            &lt;/html&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+  	&lt;title&gt;Change heading text using DOM functions&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  	&lt;h1 id="myHeading"&gt;Hello&lt;/h1&gt;
+  	&lt;script&gt;
+  		const heading = document.getElementById("myHeading");
+  		heading.textContent = "Hello World";
+  	&lt;/script&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
 
         </pre
       >
@@ -125,44 +125,44 @@
         <br> Project: <a href="./projects/dom-2/index-5.html">click Here</a>
       </p>
       <pre>
-            &lt;!DOCTYPE html&gt;
-            &lt;html&gt;
-            &lt;head&gt;
-            	&lt;title&gt;Flexbox cards&lt;/title&gt;
-            	&lt;style&gt;
-            		.container {
-            			display: flex;
-            			flex-wrap: wrap;
-            			justify-content: space-around;
-            		}
-            
-            		.card {
-            			background-color: #ff0808;
-            			padding: 10px;
-            			margin: 10px;
-            			width: 200px;
-            			height: 200px;
-            		}
-            	&lt;/style&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-            	&lt;div class="container"&gt;
-            		&lt;div class="card"&gt;Card 1&lt;/div&gt;
-            		&lt;div class="card"&gt;Card 2&lt;/div&gt;
-            		&lt;div class="card"&gt;Card 3&lt;/div&gt;
-            	&lt;/div&gt;
-            	&lt;button id="changeFlexDirection"&gt;Change Flex Direction&lt;/button&gt;
-            
-            	&lt;script&gt;
-            		const button = document.getElementById("changeFlexDirection");
-            		const container = document.querySelector(".container");
-            
-            		button.addEventListener("click", function() {
-            			container.style.flexDirection = "column";
-            		});
-            	&lt;/script&gt;
-            &lt;/body&gt;
-            &lt;/html&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+  	&lt;title&gt;Flexbox cards&lt;/title&gt;
+  	&lt;style&gt;
+  		.container {
+  			display: flex;
+  			flex-wrap: wrap;
+  			justify-content: space-around;
+  		}
+  
+  		.card {
+  			background-color: #ff0808;
+  			padding: 10px;
+  			margin: 10px;
+  			width: 200px;
+  			height: 200px;
+  		}
+  	&lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  	&lt;div class="container"&gt;
+  		&lt;div class="card"&gt;Card 1&lt;/div&gt;
+  		&lt;div class="card"&gt;Card 2&lt;/div&gt;
+  		&lt;div class="card"&gt;Card 3&lt;/div&gt;
+  	&lt;/div&gt;
+  	&lt;button id="changeFlexDirection"&gt;Change Flex Direction&lt;/button&gt;
+  
+  	&lt;script&gt;
+  		const button = document.getElementById("changeFlexDirection");
+  		const container = document.querySelector(".container");
+  
+  		button.addEventListener("click", function() {
+  			container.style.flexDirection = "column";
+  		});
+  	&lt;/script&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
 
         </pre
       >
@@ -177,19 +177,19 @@
         <br> Project: <a href="./projects/dom-2/index-7.html">click Here</a>
       </p>
       <pre>            
-        &lt;!DOCTYPE html&gt;
-        &lt;html&gt;
-        &lt;head&gt;
-        	&lt;title&gt;Change heading style using DOM functions&lt;/title&gt;
-       &lt;/head&gt;
-        &lt;body&gt;
-        	&lt;h1 id="heading"&gt;Hello&lt;/h1&gt;
-        	&lt;script&gt;
-        		const heading = document.getElementById("heading");
-        		heading.setAttribute("style", "color: red;");		
-        	&lt;/script&gt;
-        &lt;/body&gt;
-        &lt;/html&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+  	&lt;title&gt;Change heading style using DOM functions&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  	&lt;h1 id="heading"&gt;Hello&lt;/h1&gt;
+  	&lt;script&gt;
+  		const heading = document.getElementById("heading");
+  		heading.setAttribute("style", "color: red;");		
+  	&lt;/script&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
 
         </pre
       >
@@ -198,50 +198,50 @@
               <br> Project: <a href="./projects/dom-2/index-8.html">click Here</a></p>
 
         <pre>
-        &lt;!DOCTYPE html&gt;
-        &lt;html&gt;
-        &lt;head&gt;
-        	&lt;title&gt;click on button&lt;/title&gt;
-       &lt;/head&gt;
-        &lt;body&gt;          
-            &lt;p id="text"&gt;Hello world&lt;/p&gt;
-            &lt;button onclick="replaceText()"&gt;Replace Text&lt;/button&gt;
-          
-            &lt;script&gt;
-              function replaceText() {
-                const text = document.getElementById("text");
-                text.innerText = "Welcome to Elevation academy";
-              }
-            &lt;/script&gt;
-          &lt;/body&gt;
-        &lt;/html&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+  	&lt;title&gt;click on button&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;          
+      &lt;p id="text"&gt;Hello world&lt;/p&gt;
+      &lt;button onclick="replaceText()"&gt;Replace Text&lt;/button&gt;
+    
+      &lt;script&gt;
+        function replaceText() {
+          const text = document.getElementById("text");
+          text.innerText = "Welcome to Elevation academy";
+        }
+      &lt;/script&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
       </pre
       >
       <p>Que.9 Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second
                  <br> Project: <a href="./projects/dom-2/index-9.html">click Here</a>
       </p>
       <pre>            
-        &lt;!DOCTYPE html&gt;
-        &lt;html&gt;
-          &lt;head&gt;
-            &lt;title&gt;timer clock using JS&lt;/title&gt;
-          &lt;/head&gt;
-          &lt;body&gt;
-            &lt;h1 id="timer"&gt;00:00:00&lt;/h1&gt;
-        
-            &lt;script&gt;
-              setInterval(function () {
-                const timer = document.getElementById("timer");
-                const now = new Date();
-                const hours = now.getHours().toString().padStart(2, "0");
-                const minutes = now.getMinutes().toString().padStart(2, "0");
-                const seconds = now.getSeconds().toString().padStart(2, "0");
-                const currentTime = hours + ":" + minutes + ":" + seconds;
-                timer.innerText = currentTime;
-              }, 1000);
-            &lt;/script&gt;
-          &lt;/body&gt;
-        &lt;/html&gt;
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;timer clock using JS&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1 id="timer"&gt;00:00:00&lt;/h1&gt;
+  
+      &lt;script&gt;
+        setInterval(function () {
+          const timer = document.getElementById("timer");
+          const now = new Date();
+          const hours = now.getHours().toString().padStart(2, "0");
+          const minutes = now.getMinutes().toString().padStart(2, "0");
+          const seconds = now.getSeconds().toString().padStart(2, "0");
+          const currentTime = hours + ":" + minutes + ":" + seconds;
+          timer.innerText = currentTime;
+        }, 1000);
+      &lt;/script&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
     
       </pre
       >
